@@ -2,18 +2,14 @@
 
 ## Evaluations
 Run the following command to generate and evaluate blind-test predictions reported in the original EGG paper. 
-
 * model config (-m)
   * Regression-Transformer: ./configs/
   * Regression-MetaLayer: ./configs/
   * EBM-Transformer: ./configs/
   * EBM-MetaLayer: ./configs/
 * output directory (-o)
-* 
 ```
 python run_blindtest.py -m ./configs/config.json -o ./results/
 ```
-
-## Training 
-
+## Training
 Run the following commands to re-train the model architectures, for (EBM or Regression Based Methods) reported in the original EGG paper. 
