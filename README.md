@@ -3,11 +3,11 @@
 ## Evaluations
 Run the following command to run the evaluations performed and reported in the original EGG paper. 
 
-> model config (-m)
->  > Regression-Transformer: ./configs/
->  > Regression-MetaLayer: ./configs/
->  > EBM-Transformer: ./configs/
->  > EBM-MetaLayer: ./configs/
+* model config (-m)
+  * Regression-Transformer: ./configs/
+  * Regression-MetaLayer: ./configs/
+  * EBM-Transformer: ./configs/
+  * EBM-MetaLayer: ./configs/
 ```
 python run_blindtest.py -m ./configs/config.json -t EBM -s TM -o ./results/
 ```
