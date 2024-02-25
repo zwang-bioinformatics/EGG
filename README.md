@@ -1,4 +1,8 @@
 # EGG: Accuracy Estimation of Individual Multimeric Protein Models using Deep Energy-Based Models and Graph Neural Networks
+Our code was implemented using Python version ~ 3.9. Please install the required packages using the following command:
+```
+pip install -r requirements.txt
+```
 Please download the generated database (...GB) using the following command:
 ```
 wget http://dna.cs.miami.edu/EGG/EGG_database.gzip
