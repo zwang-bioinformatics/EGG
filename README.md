@@ -11,12 +11,12 @@ gzip -d EGG.gzip
 ```
 git clone https://github.com/zwang-bioinformatics/EGG/
 ```
-For evaluation, please download the CASP15 blind test data (...GB) using the following commands: 
+For evaluation, please download the CASP15 blind test data (~100GB) using the following commands: 
 ```
 wget http://dna.cs.miami.edu/EGG/EGG_blind_test_data.gzip
 gzip -d EGG_blind_test_data.gzip
 ```
-For training please download the generated database (...GB) using the following commands:
+For training & validation please download the generated databases (~307GB) using the following commands:
 ```
 wget http://dna.cs.miami.edu/EGG/EGG_training_data.gzip
 gzip -d EGG_training_data.gzip
