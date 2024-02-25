@@ -13,3 +13,8 @@ python run_blindtest.py -m ./configs/config.json -o ./results/
 ```
 ## Training
 Run the following commands to re-train the model architectures, for (EBM or Regression Based Methods) reported in the original EGG paper. 
+
+## Citation
+Andrew Jordan Siciliano, Chenguang Zhao, Tong Liu, and Zheng Wang.
+EGG: Accuracy Estimation of Individual Multimeric Protein Models using Deep Energy-Based Models and Graph Neural Networks
+
