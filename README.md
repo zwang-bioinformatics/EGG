@@ -6,6 +6,8 @@ pip install -r requirements.txt
 Our source code can be downloaded using either of the following commands:
 ```
 wget http://dna.cs.miami.edu/EGG/EGG.zip
+```
+```
 git clone https://github.com/zwang-bioinformatics/EGG/
 ```
 Please download the generated database (...GB) using the following command:
