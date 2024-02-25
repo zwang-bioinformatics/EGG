@@ -8,7 +8,12 @@ Please download the generated database (...GB) using the following command:
 wget http://dna.cs.miami.edu/EGG/EGG_database.gzip
 gzip -d EGG_database.gzip
 ```
-Update the 'init.py' file to reflect both the root directory of the project and the directory pointing to the unzipped 'EGG_database'. 
+Please download the casp15 group predictions and mappings using the following commands: 
+```
+wget https://git.scicore.unibas.ch/schwede/casp15_ema/-/raw/main/custom_analysis/global_df.csv
+wget https://git.scicore.unibas.ch/schwede/casp15_ema/-/raw/main/group_mappings.json
+```
+Update the `init.py` file to reflect the root directory of the project, the directory pointing to the unzipped `EGG_database`, and both the `global_df.csv` and `group_mappings.json` files. 
 ## Evaluations
 Run the following command to generate and evaluate blind-test (CASP15 Targets) predictions reported in the original EGG paper. 
 * model config (-m)
