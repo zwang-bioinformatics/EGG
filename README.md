@@ -8,7 +8,7 @@ Please download the generated database (...GB) using the following command:
 wget http://dna.cs.miami.edu/EGG/EGG_database.gzip
 gzip -d EGG_database.gzip
 ```
-Please download the casp15 group predictions and mappings using the following commands: 
+Please download the CASP15 group predictions and mappings using the following commands: 
 ```
 wget https://git.scicore.unibas.ch/schwede/casp15_ema/-/raw/main/custom_analysis/global_df.csv
 wget https://git.scicore.unibas.ch/schwede/casp15_ema/-/raw/main/group_mappings.json
