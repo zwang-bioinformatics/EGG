@@ -12,7 +12,7 @@ Run the following command to generate and evaluate blind-test predictions report
 python run_blindtest.py -m ./configs/config.json -o ./results/
 ```
 ## Training
-Run the following commands to re-train the model architectures, for (EBM or Regression Based Methods) reported in the original EGG paper. 
+Run the following commands to re-train the model architectures (EBM or Regression Based Methods), reported in the original EGG paper. 
 
 ## Citation
 Andrew Jordan Siciliano, Chenguang Zhao, Tong Liu, and Zheng Wang.
