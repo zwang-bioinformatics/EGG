@@ -1,6 +1,6 @@
 # EGG: Accuracy Estimation of Individual Multimeric Protein Models using Deep Energy-Based Models and Graph Neural Networks
 
-## Init
+## Configure Source Code
 Please download the generated database (...GB) using the following command:
 ```
 wget http://dna.cs.miami.edu/EGG/EGG_database.gzip
