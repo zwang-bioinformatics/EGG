@@ -30,7 +30,7 @@ python
 ```
 To evaluate the newly trained models run the following command: 
 ```
-
+python
 ```
 
 ## Citation
