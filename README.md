@@ -37,6 +37,7 @@ Run the following command to generate and evaluate blind-test (CASP15 Targets) p
   * EBM-Transformer: ./configs/
   * EBM-MetaLayer: ./configs/
 * epoch (-e)
+ * setting this to `default` will revert to the weights of the models evaluated in the original EGG paper.
 * output directory (-o)
 ```
 python run_blindtest.py -m ./configs/config.json -e -1 -o ./results/
