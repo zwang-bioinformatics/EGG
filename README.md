@@ -30,7 +30,7 @@ wget https://git.scicore.unibas.ch/schwede/casp15_ema/-/raw/main/custom_analysis
 ```
 Update the `init.py` file to reflect the root directory of the project, the unzipped databases, and both the `global_df.csv` and `group_mappings.json` files. 
 ## Evaluations
-Run the following command to generate and evaluate blind-test (CASP15 Targets) predictions reported in the original EGG paper. 
+Run the following command to generate and evaluate blind-test (CASP15 Targets) predictions reported in the original EGG paper. Minor differences are expected.
 * model config (-m)
   * Regression-Transformer: ./configs/
   * Regression-MetaLayer: ./configs/
