@@ -31,10 +31,10 @@ Update the `init.py` file to reflect the root directory of the project, the unzi
 ## Evaluations
 Predictions for our models reported in the original EGG paper are pre-saved in the CSV files for convenience (see `./results/`).
 If you want to reproduce our blind-test (CASP15 Targets) predictions, run the following command for each of the configs in the `./configs/` directory:
-Note: this will overwrite the existing pre-saved CSV files, minor differences can occur, and the default device is cpu but that can be changed using the `-d` flag. 
 ``
 python generate_predictions.py -m CONFIG.json 
 ``
+Note: this will overwrite the existing pre-saved CSV files, minor differences can occur, and the default device is cpu but that can be changed using the `-d` flag. 
 Run the following command to evaluate & generate figures for the blind-test (CASP15 Targets) predictions stored in the CSV files (Note: the previous step is not nessecary to run this command): 
 ```
 python run_eval.py
