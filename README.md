@@ -46,7 +46,7 @@ A mock training script is provided to re-train the model architectures (EBM or R
 python train.py -m CONFIG.json -e EPOCHS -b BATCH_SIZE -d DEVICE
 ```
 Trained models and metrics will be saved in `./models/CONFIG/epoch_XXXX/` under `model.pt` & `metrics.json`. 
-The parameters associated with the models reported in the original EGG paper are under `./models/CONFIG/default/model.py`.
+The parameters associated with the models reported in the original EGG paper are under `./models/CONFIG/default/model.pt`.
 ## Citation
 Andrew Jordan Siciliano, Chenguang Zhao, Tong Liu, and Zheng Wang.
 EGG: Accuracy Estimation of Individual Multimeric Protein Models using Deep Energy-Based Models and Graph Neural Networks
