@@ -26,7 +26,7 @@ wget https://git.scicore.unibas.ch/schwede/casp15_ema/-/raw/main/group_mappings.
 wget https://git.scicore.unibas.ch/schwede/casp15_ema/-/raw/main/custom_analysis/global_df.csv
 wget https://git.scicore.unibas.ch/schwede/casp15_ema/-/raw/main/ema_targets.json
 ```
-Update the `init.py` file to reflect the root directory of the project, the unzipped databases, the `global_df.csv`, `group_mappings.json`, and `ema_targets.json `files. 
+Update the `init.py` file to reflect the root directory of the project, the unzipped databases, the `global_df.csv`, `group_mappings.json`, and `ema_targets.json` files. 
 
 ## Evaluations
 Predictions for our models reported in the original EGG paper are pre-saved in the CSV files for convenience (see `./results/`).
