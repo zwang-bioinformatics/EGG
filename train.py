@@ -159,7 +159,7 @@ for epoch in range(1,args.epochs+1):
     
     n = 0
 
-    for batch in tqdm(list(chunked(training_database[:10], args.batch_size)),desc="Training (Epoch "+str(epoch)+")"): 
+    for batch in tqdm(list(chunked(training_database, args.batch_size)),desc="Training (Epoch "+str(epoch)+")"): 
 
         if config["model_type"] == "global_graph": 
 
@@ -300,7 +300,7 @@ for epoch in range(1,args.epochs+1):
 
     with torch.no_grad():
 
-        for example_fl in tqdm(list(validation_database)[:25],desc="Validation"): 
+        for example_fl in tqdm(validation_database,desc="Validation"): 
 
             example = torch.load(TRAINING_DATABASE + "processed/" + example_fl)
 
