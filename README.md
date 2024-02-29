@@ -1,8 +1,6 @@
 # EGG: Accuracy Estimation of Individual Multimeric Protein Models using Deep Energy-Based Models and Graph Neural Networks
-Our code was implemented using Python version ~ 3.9. Please install the required packages using the following command:
-```
-pip install -r requirements.txt
-```
+Our code was implemented using Python version ~ 3.9. 
+PyTorch Version 2.1.0 and PyTorch Geometric Version 2.4.0 was used. 
 Our source code can be downloaded using either of the following commands:
 ```
 wget http://dna.cs.miami.edu/EGG/EGG.gzip
@@ -27,38 +25,29 @@ Please download the CASP15 group mappings and predictions using the following co
 ```
 wget https://git.scicore.unibas.ch/schwede/casp15_ema/-/raw/main/group_mappings.json
 wget https://git.scicore.unibas.ch/schwede/casp15_ema/-/raw/main/custom_analysis/global_df.csv
+wget https://git.scicore.unibas.ch/schwede/casp15_ema/-/raw/main/ema_targets.json
 ```
-Update the `init.py` file to reflect the root directory of the project, the unzipped databases, and both the `global_df.csv` and `group_mappings.json` files. 
+Update the `init.py` file to reflect the root directory of the project, the unzipped databases, the `global_df.csv`, `group_mappings.json`, and `ema_targets.json `files. 
+
 ## Evaluations
-Run the following command to generate and evaluate blind-test (CASP15 Targets) predictions reported in the original EGG paper. 
-Note: Minor differences can occur.
-* model config (-m)
-  * Regression-Transformer: ./configs/
-  * Regression-MetaLayer: ./configs/
-  * EBM-Transformer: ./configs/
-  * EBM-MetaLayer: ./configs/
-* epoch (-e)
- * setting this to `default` will revert to the weights of the models evaluated in the original EGG paper.
-* output directory (-o)
+Predictions for our models reported in the original EGG paper are pre-saved in the CSV files for convenience (see `./results/`).
+If you want to reproduce our blind-test (CASP15 Targets) predictions, run the following command for each of the configs in the `./configs/` directory:
+Note: this will overwrite the existing pre-saved CSV files, minor differences can occur, and the default device is cpu but that can be changed using the `-d` flag. 
+``
+python generate_predictions.py -m CONFIG.json 
+``
+Run the following command to evaluate & generate figures for the blind-test (CASP15 Targets) predictions stored in the CSV files (Note: the previous step is not nessecary to run this command): 
 ```
-python run_blindtest.py -m ./configs/config.json -e -1 -o ./results/
+python run_eval.py
 ```
+This will save all figures in `ROOT + "reproduced_figures/"` and print L1 and MSE losses for each of the CSV files associated with a model architecture and score type (TM or QS). 
 ## Training
-Run the following commands to re-train the model architectures (EBM or Regression Based Methods), reported in the original EGG paper. 
-
-Train Regression Backbone Models:
-```
-python
-```
-Train EBMs:
-```
-python
-```
-To evaluate the newly trained models run the following command: 
-```
-python
-```
-
+A mock training script is provided to re-train the model architectures (EBM or Regression Based Methods), reported in the original EGG paper. Note that this script does not utilize all of the features reported in the original paper and is a simpler version for usability. To train run the following command: 
+``
+python train.py -m CONFIG.json -e EPOCHS -b BATCH_SIZE -d DEVICE
+``
+Trained models and metrics will be saved in `./models/CONFIG/epoch_XXXX/` under `model.pt` & `metrics.json`. 
+The parameters associated with the models reported in the original EGG paper are under `./models/CONFIG/default/model.py`.
 ## Citation
 Andrew Jordan Siciliano, Chenguang Zhao, Tong Liu, and Zheng Wang.
 EGG: Accuracy Estimation of Individual Multimeric Protein Models using Deep Energy-Based Models and Graph Neural Networks
