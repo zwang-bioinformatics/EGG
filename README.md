@@ -41,7 +41,7 @@ python run_eval.py
 ```
 This will save all figures in `ROOT + "reproduced_figures/"` and print L1 and MSE losses for each of the CSV files associated with a model architecture and score type (TM or QS). 
 ## Training
-A mock training script is provided to re-train the model architectures (EBM or Regression Based Methods), reported in the original EGG paper. Note that this script does not utilize all of the features reported in the original paper and is a simpler version for usability. To train run the following command: 
+A mock training script is provided to re-train the model architectures (EBM or Regression-GNN) reported in the original EGG paper. Note that this script does not utilize all of the features reported in the original paper and is a simpler version for usability. To train run the following command: 
 ```
 python train.py -m CONFIG.json -e EPOCHS -b BATCH_SIZE -d DEVICE
 ```
