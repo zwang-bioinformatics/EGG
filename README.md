@@ -1,6 +1,5 @@
 # EGG: Accuracy Estimation of Individual Multimeric Protein Models using Deep Energy-Based Models and Graph Neural Networks
-Our code was implemented using Python version ~ 3.9. 
-PyTorch Version 2.1.0 and PyTorch Geometric Version 2.4.0 was used. 
+Our code was implemented using Python version ~ 3.9, PyTorch Version 2.1.0 and PyTorch Geometric Version 2.4.0. 
 Our source code can be downloaded using either of the following commands:
 ```
 wget http://dna.cs.miami.edu/EGG/EGG.gzip
