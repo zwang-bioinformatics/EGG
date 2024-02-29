@@ -1,0 +1,806 @@
+{
+    "model_type": "global_graph",
+    "data_params": {
+        "data_tag": "casp15_global_updated_",
+        "batch_size_training": 5,
+        "batch_size_validation": 5
+    },
+    "start_epoch": -1,
+    "learning_rate": 0.00028365658616461936,
+    "optimizer": [
+        "adamw",
+        0.001
+    ],
+    "scheduler": [
+        "MultiplicativeLR",
+        {
+            "lr_lambda": 0.9527601973485689
+        }
+    ],
+    "gradient_accumulation": 5,
+    "epochs": 20,
+    "sync_bn": true,
+    "clip_grad": -1,
+    "clip_norm": -1,
+    "quartile": 0.6440493330813005,
+    "history_len": 1500,
+    "weight_distribution": 3,
+    "shuffle": true,
+    "sanity": false,
+    "init": [
+        [
+            1367,
+            10
+        ],
+        [
+            [
+                [
+                    "MetaLayer",
+                    [
+                        [
+                            0
+                        ],
+                        [
+                            0
+                        ]
+                    ]
+                ],
+                [
+                    [
+                        [
+                            "Linear",
+                            [
+                                0
+                            ]
+                        ],
+                        {
+                            "out_channels": 10
+                        }
+                    ],
+                    [
+                        [
+                            "dropout",
+                            [
+                                1
+                            ]
+                        ],
+                        {
+                            "p": 0.007249390294281908
+                        }
+                    ],
+                    [
+                        [
+                            "ReLU",
+                            [
+                                2
+                            ]
+                        ],
+                        {
+                            "out_channels": 10
+                        }
+                    ],
+                    [
+                        [
+                            "Linear",
+                            [
+                                3
+                            ]
+                        ],
+                        {
+                            "out_channels": 12
+                        }
+                    ],
+                    [
+                        [
+                            "GraphNorm",
+                            [
+                                4
+                            ]
+                        ],
+                        {}
+                    ],
+                    [
+                        [
+                            "ReLU",
+                            [
+                                5
+                            ]
+                        ],
+                        {
+                            "out_channels": 12
+                        }
+                    ]
+                ],
+                {
+                    "None": false,
+                    "top": [
+                        [
+                            [
+                                "Linear",
+                                [
+                                    0
+                                ]
+                            ],
+                            {
+                                "out_channels": 37,
+                                "midway": false
+                            }
+                        ],
+                        [
+                            [
+                                "dropout",
+                                [
+                                    1
+                                ]
+                            ],
+                            {
+                                "p": 0.006553663984072305
+                            }
+                        ],
+                        [
+                            [
+                                "ReLU",
+                                [
+                                    2
+                                ]
+                            ],
+                            {
+                                "out_channels": 37
+                            }
+                        ],
+                        [
+                            [
+                                "Linear",
+                                [
+                                    3
+                                ]
+                            ],
+                            {
+                                "out_channels": 27,
+                                "midway": false
+                            }
+                        ],
+                        [
+                            [
+                                "dropout",
+                                [
+                                    4
+                                ]
+                            ],
+                            {
+                                "p": 0.006553663984072305
+                            }
+                        ],
+                        [
+                            [
+                                "ReLU",
+                                [
+                                    5
+                                ]
+                            ],
+                            {
+                                "out_channels": 27
+                            }
+                        ],
+                        [
+                            [
+                                "Linear",
+                                [
+                                    6
+                                ]
+                            ],
+                            {
+                                "out_channels": 24,
+                                "midway": true
+                            }
+                        ],
+                        [
+                            [
+                                "dropout",
+                                [
+                                    7
+                                ]
+                            ],
+                            {
+                                "p": 0.006553663984072305
+                            }
+                        ],
+                        [
+                            [
+                                "ReLU",
+                                [
+                                    8
+                                ]
+                            ],
+                            {
+                                "out_channels": 24
+                            }
+                        ]
+                    ],
+                    "bottom": [
+                        [
+                            [
+                                "Linear",
+                                [
+                                    9
+                                ]
+                            ],
+                            {
+                                "out_channels": 35
+                            }
+                        ],
+                        [
+                            [
+                                "dropout",
+                                [
+                                    10
+                                ]
+                            ],
+                            {
+                                "p": 0.008012210164819171
+                            }
+                        ],
+                        [
+                            [
+                                "ReLU",
+                                [
+                                    11
+                                ]
+                            ],
+                            {
+                                "out_channels": 35
+                            }
+                        ],
+                        [
+                            [
+                                "Linear",
+                                [
+                                    12
+                                ]
+                            ],
+                            {
+                                "out_channels": 31
+                            }
+                        ],
+                        [
+                            [
+                                "dropout",
+                                [
+                                    13
+                                ]
+                            ],
+                            {
+                                "p": 0.008012210164819171
+                            }
+                        ],
+                        [
+                            [
+                                "ReLU",
+                                [
+                                    14
+                                ]
+                            ],
+                            {
+                                "out_channels": 31
+                            }
+                        ],
+                        [
+                            [
+                                "Linear",
+                                [
+                                    15
+                                ]
+                            ],
+                            {
+                                "out_channels": 18
+                            }
+                        ],
+                        [
+                            [
+                                "GraphNorm",
+                                [
+                                    16
+                                ]
+                            ],
+                            {}
+                        ],
+                        [
+                            [
+                                "ReLU",
+                                [
+                                    17
+                                ]
+                            ],
+                            {
+                                "out_channels": 18
+                            }
+                        ]
+                    ]
+                }
+            ],
+            [
+                [
+                    "MergeModel",
+                    [
+                        [
+                            1
+                        ],
+                        [
+                            1
+                        ]
+                    ]
+                ],
+                [
+                    [
+                        [
+                            "Linear",
+                            [
+                                0
+                            ]
+                        ],
+                        {
+                            "out_channels": 9
+                        }
+                    ],
+                    [
+                        [
+                            "ReLU",
+                            [
+                                1
+                            ]
+                        ],
+                        {
+                            "out_channels": 9
+                        }
+                    ],
+                    [
+                        [
+                            "dropout",
+                            [
+                                2
+                            ]
+                        ],
+                        {
+                            "p": 0.006187360485172214,
+                            "out_channels": 9
+                        }
+                    ],
+                    [
+                        [
+                            "Linear",
+                            [
+                                3
+                            ]
+                        ],
+                        {
+                            "out_channels": 6
+                        }
+                    ],
+                    [
+                        [
+                            "ReLU",
+                            [
+                                4
+                            ]
+                        ],
+                        {
+                            "out_channels": 6
+                        }
+                    ],
+                    [
+                        [
+                            "dropout",
+                            [
+                                5
+                            ]
+                        ],
+                        {
+                            "p": 0.006187360485172214,
+                            "out_channels": 6
+                        }
+                    ],
+                    [
+                        [
+                            "GlobalAttention",
+                            [
+                                6
+                            ]
+                        ],
+                        {
+                            "gate_nn": [
+                                [
+                                    [
+                                        "Linear",
+                                        [
+                                            0
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 7
+                                    }
+                                ],
+                                [
+                                    [
+                                        "ReLU",
+                                        [
+                                            1
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 7
+                                    }
+                                ],
+                                [
+                                    [
+                                        "dropout",
+                                        [
+                                            2
+                                        ]
+                                    ],
+                                    {
+                                        "p": 0.0073500484211210665,
+                                        "out_channels": 7
+                                    }
+                                ],
+                                [
+                                    [
+                                        "Linear",
+                                        [
+                                            3
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 5
+                                    }
+                                ],
+                                [
+                                    [
+                                        "ReLU",
+                                        [
+                                            4
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 5
+                                    }
+                                ],
+                                [
+                                    [
+                                        "dropout",
+                                        [
+                                            5
+                                        ]
+                                    ],
+                                    {
+                                        "p": 0.0073500484211210665,
+                                        "out_channels": 5
+                                    }
+                                ],
+                                [
+                                    [
+                                        "Linear",
+                                        [
+                                            6
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 1
+                                    }
+                                ],
+                                [
+                                    [
+                                        "ReLU",
+                                        [
+                                            7
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 1
+                                    }
+                                ],
+                                [
+                                    [
+                                        "dropout",
+                                        [
+                                            8
+                                        ]
+                                    ],
+                                    {
+                                        "p": 0.0073500484211210665,
+                                        "out_channels": 1
+                                    }
+                                ]
+                            ],
+                            "map_nn": [
+                                [
+                                    [
+                                        "Linear",
+                                        [
+                                            0
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 14
+                                    }
+                                ],
+                                [
+                                    [
+                                        "ReLU",
+                                        [
+                                            1
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 14
+                                    }
+                                ],
+                                [
+                                    [
+                                        "dropout",
+                                        [
+                                            2
+                                        ]
+                                    ],
+                                    {
+                                        "p": 0.0018288389000533827,
+                                        "out_channels": 14
+                                    }
+                                ],
+                                [
+                                    [
+                                        "Linear",
+                                        [
+                                            3
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 12
+                                    }
+                                ],
+                                [
+                                    [
+                                        "ReLU",
+                                        [
+                                            4
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 12
+                                    }
+                                ],
+                                [
+                                    [
+                                        "dropout",
+                                        [
+                                            5
+                                        ]
+                                    ],
+                                    {
+                                        "p": 0.0018288389000533827,
+                                        "out_channels": 12
+                                    }
+                                ]
+                            ]
+                        }
+                    ],
+                    [
+                        [
+                            "Linear",
+                            [
+                                7
+                            ]
+                        ],
+                        {
+                            "out_channels": 5
+                        }
+                    ],
+                    [
+                        [
+                            "ReLU",
+                            [
+                                8
+                            ]
+                        ],
+                        {
+                            "out_channels": 5
+                        }
+                    ],
+                    [
+                        [
+                            "dropout",
+                            [
+                                9
+                            ]
+                        ],
+                        {
+                            "p": 0.0033415329355790512,
+                            "out_channels": 5
+                        }
+                    ],
+                    [
+                        [
+                            "batchNorm1D",
+                            [
+                                10
+                            ]
+                        ],
+                        {
+                            "affine": true,
+                            "out_channels": 5
+                        }
+                    ],
+                    [
+                        [
+                            "Linear",
+                            [
+                                11
+                            ]
+                        ],
+                        {
+                            "out_channels": 3
+                        }
+                    ],
+                    [
+                        [
+                            "ReLU",
+                            [
+                                12
+                            ]
+                        ],
+                        {
+                            "out_channels": 3
+                        }
+                    ],
+                    [
+                        [
+                            "dropout",
+                            [
+                                13
+                            ]
+                        ],
+                        {
+                            "p": 0.0033415329355790512,
+                            "out_channels": 3
+                        }
+                    ],
+                    [
+                        [
+                            "batchNorm1D",
+                            [
+                                14
+                            ]
+                        ],
+                        {
+                            "affine": true,
+                            "out_channels": 3
+                        }
+                    ],
+                    [
+                        [
+                            "Linear",
+                            [
+                                15
+                            ]
+                        ],
+                        {
+                            "out_channels": 1
+                        }
+                    ]
+                ]
+            ]
+        ]
+    ],
+    "params": {
+        "esm": true,
+        "esm_stats": false,
+        "ordering": "meta_full_linear_template|meta_0,merge_template|merge",
+        "meta_0|repeats": 1,
+        "meta_0|edge_block_increment_type": [
+            "quadratic",
+            1
+        ],
+        "meta_0|edge_block_reccurrent": [
+            "None"
+        ],
+        "meta_0|edge_block_norm": [
+            "None"
+        ],
+        "meta_0|node_block_top_increment_type": [
+            "quadratic",
+            1
+        ],
+        "meta_0|node_block_top_reccurrent": [
+            "None"
+        ],
+        "meta_0|node_block_top_norm": [
+            "None"
+        ],
+        "meta_0|node_block_bottom_increment_type": [
+            "quadratic",
+            1
+        ],
+        "meta_0|node_block_bottom_reccurrent": [
+            "None"
+        ],
+        "meta_0|node_block_bottom_norm": [
+            "None"
+        ],
+        "merge|final_norm": [
+            "None"
+        ],
+        "merge|node_linear_increment_type": "quadratic!1",
+        "merge|node_linear_recurrent": [
+            "None"
+        ],
+        "merge|node_linear_norm": [
+            "None"
+        ],
+        "merge|gate_end": 1,
+        "merge|gate_increment_type": "quadratic!1",
+        "merge|gate_recurrent": [
+            "None"
+        ],
+        "merge|gate_norm": [
+            "None"
+        ],
+        "merge|map_increment_type": "quadratic!1",
+        "merge|map_recurrent": [
+            "None"
+        ],
+        "merge|map_norm": [
+            "None"
+        ],
+        "merge|global_linear_end": 1,
+        "merge|global_linear_increment_type": "quadratic!1",
+        "merge|global_linear_recurrent": [
+            "None"
+        ],
+        "learning_rate": 0.00028365658616461936,
+        "LR_lambda": 0.9527601973485689,
+        "optimizer": "adamw|0.001",
+        "gradient_accumulation": 5,
+        "quartile": 0.6440493330813005,
+        "history_len": 1500,
+        "weight_distribution": 3,
+        "meta_0|graph_norm": true,
+        "meta_0|edge_block_len": 3,
+        "meta_0|edge_block_start_c": 10,
+        "meta_0|edge_block_end_c": 12,
+        "meta_0|edge_block_increment": -8,
+        "meta_0|edge_block_p": 0.007249390294281908,
+        "meta_0|node_block_top_len": 3,
+        "meta_0|node_block_top_start_c": 37,
+        "meta_0|node_block_top_end_c": 24,
+        "meta_0|node_block_top_increment": -10,
+        "meta_0|node_block_top_p": 0.006553663984072305,
+        "meta_0|node_block_bottom_len": 2,
+        "meta_0|node_block_bottom_start_c": 35,
+        "meta_0|node_block_bottom_end_c": 18,
+        "meta_0|node_block_bottom_increment": -4,
+        "meta_0|node_block_bottom_p": 0.008012210164819171,
+        "merge|ordering": "linear",
+        "merge|node_linear_len": 2,
+        "merge|node_linear_start": 9,
+        "merge|node_linear_end": 6,
+        "merge|node_linear_increment": -3,
+        "merge|node_linear_p": 0.006187360485172214,
+        "merge|gate_len": 2,
+        "merge|gate_start": 7,
+        "merge|gate_increment": -2,
+        "merge|gate_p": 0.0073500484211210665,
+        "merge|map_len": 3,
+        "merge|map_start": 14,
+        "merge|map_end": 12,
+        "merge|map_increment": -2,
+        "merge|map_p": 0.0018288389000533827,
+        "merge|global_linear_len": 3,
+        "merge|global_linear_start": 5,
+        "merge|global_linear_increment": -2,
+        "merge|global_linear_p": 0.0033415329355790512,
+        "merge|global_linear_norm": [
+            "batchNorm1D",
+            true,
+            "after"
+        ]
+    }
+}

@@ -1,0 +1,1146 @@
+{
+    "model_type": "global_graph",
+    "data_params": {
+        "data_tag": "casp15_global_updated_",
+        "batch_size_training": 5,
+        "batch_size_validation": 5
+    },
+    "start_epoch": -1,
+    "learning_rate": 0.0002673542192474871,
+    "optimizer": [
+        "adamw",
+        0.001
+    ],
+    "scheduler": [
+        "MultiplicativeLR",
+        {
+            "lr_lambda": 0.716070336557133
+        }
+    ],
+    "gradient_accumulation": 6,
+    "epochs": 20,
+    "sync_bn": true,
+    "clip_grad": -1,
+    "clip_norm": -1,
+    "quartile": 0.20758013386612512,
+    "history_len": 7000,
+    "weight_distribution": 3,
+    "shuffle": true,
+    "sanity": false,
+    "init": [
+        [
+            1367,
+            10
+        ],
+        [
+            [
+                [
+                    "transformer",
+                    [
+                        [
+                            0
+                        ],
+                        [
+                            0
+                        ]
+                    ]
+                ],
+                335,
+                3,
+                true,
+                true,
+                0.04421118086861678,
+                "none"
+            ],
+            [
+                [
+                    "linearN",
+                    [
+                        [
+                            1
+                        ],
+                        [
+                            1
+                        ]
+                    ]
+                ],
+                335
+            ],
+            [
+                [
+                    "GraphNormN",
+                    [
+                        [
+                            2
+                        ],
+                        [
+                            2
+                        ]
+                    ]
+                ]
+            ],
+            [
+                [
+                    "ReLU",
+                    [
+                        [
+                            3
+                        ],
+                        [
+                            3
+                        ]
+                    ]
+                ],
+                "n"
+            ],
+            [
+                [
+                    "TopKPool",
+                    [
+                        [
+                            4
+                        ],
+                        [
+                            4
+                        ]
+                    ]
+                ],
+                0.75
+            ],
+            [
+                [
+                    "transformer",
+                    [
+                        [
+                            5
+                        ],
+                        [
+                            5
+                        ]
+                    ]
+                ],
+                22,
+                4,
+                true,
+                true,
+                0.04944193080500327,
+                "none"
+            ],
+            [
+                [
+                    "linearN",
+                    [
+                        [
+                            6
+                        ],
+                        [
+                            6
+                        ]
+                    ]
+                ],
+                22
+            ],
+            [
+                [
+                    "GraphNormN",
+                    [
+                        [
+                            7
+                        ],
+                        [
+                            7
+                        ]
+                    ]
+                ]
+            ],
+            [
+                [
+                    "ReLU",
+                    [
+                        [
+                            8
+                        ],
+                        [
+                            8
+                        ]
+                    ]
+                ],
+                "n"
+            ],
+            [
+                [
+                    "TopKPool",
+                    [
+                        [
+                            9
+                        ],
+                        [
+                            9
+                        ]
+                    ]
+                ],
+                0.95
+            ],
+            [
+                [
+                    "MergeModel",
+                    [
+                        [
+                            10
+                        ],
+                        [
+                            10
+                        ]
+                    ]
+                ],
+                [
+                    [
+                        [
+                            "Linear",
+                            [
+                                0
+                            ]
+                        ],
+                        {
+                            "out_channels": 98
+                        }
+                    ],
+                    [
+                        [
+                            "layerNorm",
+                            [
+                                1
+                            ]
+                        ],
+                        {
+                            "affine": true,
+                            "out_channels": 98
+                        }
+                    ],
+                    [
+                        [
+                            "ReLU",
+                            [
+                                2
+                            ]
+                        ],
+                        {
+                            "out_channels": 98
+                        }
+                    ],
+                    [
+                        [
+                            "dropout",
+                            [
+                                3
+                            ]
+                        ],
+                        {
+                            "p": 0.0638053022452135,
+                            "out_channels": 98
+                        }
+                    ],
+                    [
+                        [
+                            "Linear",
+                            [
+                                4
+                            ]
+                        ],
+                        {
+                            "out_channels": 92
+                        }
+                    ],
+                    [
+                        [
+                            "layerNorm",
+                            [
+                                5
+                            ]
+                        ],
+                        {
+                            "affine": true,
+                            "out_channels": 92
+                        }
+                    ],
+                    [
+                        [
+                            "ReLU",
+                            [
+                                6
+                            ]
+                        ],
+                        {
+                            "out_channels": 92
+                        }
+                    ],
+                    [
+                        [
+                            "dropout",
+                            [
+                                7
+                            ]
+                        ],
+                        {
+                            "p": 0.0638053022452135,
+                            "out_channels": 92
+                        }
+                    ],
+                    [
+                        [
+                            "Linear",
+                            [
+                                8
+                            ]
+                        ],
+                        {
+                            "out_channels": 86
+                        }
+                    ],
+                    [
+                        [
+                            "layerNorm",
+                            [
+                                9
+                            ]
+                        ],
+                        {
+                            "affine": true,
+                            "out_channels": 86
+                        }
+                    ],
+                    [
+                        [
+                            "ReLU",
+                            [
+                                10
+                            ]
+                        ],
+                        {
+                            "out_channels": 86
+                        }
+                    ],
+                    [
+                        [
+                            "dropout",
+                            [
+                                11
+                            ]
+                        ],
+                        {
+                            "p": 0.0638053022452135,
+                            "out_channels": 86
+                        }
+                    ],
+                    [
+                        [
+                            "Linear",
+                            [
+                                12
+                            ]
+                        ],
+                        {
+                            "out_channels": 80
+                        }
+                    ],
+                    [
+                        [
+                            "layerNorm",
+                            [
+                                13
+                            ]
+                        ],
+                        {
+                            "affine": true,
+                            "out_channels": 80
+                        }
+                    ],
+                    [
+                        [
+                            "ReLU",
+                            [
+                                14
+                            ]
+                        ],
+                        {
+                            "out_channels": 80
+                        }
+                    ],
+                    [
+                        [
+                            "dropout",
+                            [
+                                15
+                            ]
+                        ],
+                        {
+                            "p": 0.0638053022452135,
+                            "out_channels": 80
+                        }
+                    ],
+                    [
+                        [
+                            "Linear",
+                            [
+                                16
+                            ]
+                        ],
+                        {
+                            "out_channels": 74
+                        }
+                    ],
+                    [
+                        [
+                            "layerNorm",
+                            [
+                                17
+                            ]
+                        ],
+                        {
+                            "affine": true,
+                            "out_channels": 74
+                        }
+                    ],
+                    [
+                        [
+                            "ReLU",
+                            [
+                                18
+                            ]
+                        ],
+                        {
+                            "out_channels": 74
+                        }
+                    ],
+                    [
+                        [
+                            "dropout",
+                            [
+                                19
+                            ]
+                        ],
+                        {
+                            "p": 0.0638053022452135,
+                            "out_channels": 74
+                        }
+                    ],
+                    [
+                        [
+                            "Linear",
+                            [
+                                20
+                            ]
+                        ],
+                        {
+                            "out_channels": 71
+                        }
+                    ],
+                    [
+                        [
+                            "layerNorm",
+                            [
+                                21
+                            ]
+                        ],
+                        {
+                            "affine": true,
+                            "out_channels": 71
+                        }
+                    ],
+                    [
+                        [
+                            "ReLU",
+                            [
+                                22
+                            ]
+                        ],
+                        {
+                            "out_channels": 71
+                        }
+                    ],
+                    [
+                        [
+                            "dropout",
+                            [
+                                23
+                            ]
+                        ],
+                        {
+                            "p": 0.0638053022452135,
+                            "out_channels": 71
+                        }
+                    ],
+                    [
+                        [
+                            "GlobalAttention",
+                            [
+                                24
+                            ]
+                        ],
+                        {
+                            "gate_nn": [
+                                [
+                                    [
+                                        "Linear",
+                                        [
+                                            0
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 46
+                                    }
+                                ],
+                                [
+                                    [
+                                        "ReLU",
+                                        [
+                                            1
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 46
+                                    }
+                                ],
+                                [
+                                    [
+                                        "dropout",
+                                        [
+                                            2
+                                        ]
+                                    ],
+                                    {
+                                        "p": 0.029833993342711772,
+                                        "out_channels": 46
+                                    }
+                                ],
+                                [
+                                    [
+                                        "layerNorm",
+                                        [
+                                            3
+                                        ]
+                                    ],
+                                    {
+                                        "affine": true,
+                                        "out_channels": 46
+                                    }
+                                ],
+                                [
+                                    [
+                                        "Linear",
+                                        [
+                                            4
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 38
+                                    }
+                                ],
+                                [
+                                    [
+                                        "ReLU",
+                                        [
+                                            5
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 38
+                                    }
+                                ],
+                                [
+                                    [
+                                        "dropout",
+                                        [
+                                            6
+                                        ]
+                                    ],
+                                    {
+                                        "p": 0.029833993342711772,
+                                        "out_channels": 38
+                                    }
+                                ],
+                                [
+                                    [
+                                        "layerNorm",
+                                        [
+                                            7
+                                        ]
+                                    ],
+                                    {
+                                        "affine": true,
+                                        "out_channels": 38
+                                    }
+                                ],
+                                [
+                                    [
+                                        "Linear",
+                                        [
+                                            8
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 30
+                                    }
+                                ],
+                                [
+                                    [
+                                        "ReLU",
+                                        [
+                                            9
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 30
+                                    }
+                                ],
+                                [
+                                    [
+                                        "dropout",
+                                        [
+                                            10
+                                        ]
+                                    ],
+                                    {
+                                        "p": 0.029833993342711772,
+                                        "out_channels": 30
+                                    }
+                                ],
+                                [
+                                    [
+                                        "layerNorm",
+                                        [
+                                            11
+                                        ]
+                                    ],
+                                    {
+                                        "affine": true,
+                                        "out_channels": 30
+                                    }
+                                ],
+                                [
+                                    [
+                                        "Linear",
+                                        [
+                                            12
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 22
+                                    }
+                                ],
+                                [
+                                    [
+                                        "ReLU",
+                                        [
+                                            13
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 22
+                                    }
+                                ],
+                                [
+                                    [
+                                        "dropout",
+                                        [
+                                            14
+                                        ]
+                                    ],
+                                    {
+                                        "p": 0.029833993342711772,
+                                        "out_channels": 22
+                                    }
+                                ],
+                                [
+                                    [
+                                        "layerNorm",
+                                        [
+                                            15
+                                        ]
+                                    ],
+                                    {
+                                        "affine": true,
+                                        "out_channels": 22
+                                    }
+                                ],
+                                [
+                                    [
+                                        "Linear",
+                                        [
+                                            16
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 14
+                                    }
+                                ],
+                                [
+                                    [
+                                        "ReLU",
+                                        [
+                                            17
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 14
+                                    }
+                                ],
+                                [
+                                    [
+                                        "dropout",
+                                        [
+                                            18
+                                        ]
+                                    ],
+                                    {
+                                        "p": 0.029833993342711772,
+                                        "out_channels": 14
+                                    }
+                                ],
+                                [
+                                    [
+                                        "layerNorm",
+                                        [
+                                            19
+                                        ]
+                                    ],
+                                    {
+                                        "affine": true,
+                                        "out_channels": 14
+                                    }
+                                ],
+                                [
+                                    [
+                                        "Linear",
+                                        [
+                                            20
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 6
+                                    }
+                                ],
+                                [
+                                    [
+                                        "ReLU",
+                                        [
+                                            21
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 6
+                                    }
+                                ],
+                                [
+                                    [
+                                        "dropout",
+                                        [
+                                            22
+                                        ]
+                                    ],
+                                    {
+                                        "p": 0.029833993342711772,
+                                        "out_channels": 6
+                                    }
+                                ],
+                                [
+                                    [
+                                        "layerNorm",
+                                        [
+                                            23
+                                        ]
+                                    ],
+                                    {
+                                        "affine": true,
+                                        "out_channels": 6
+                                    }
+                                ],
+                                [
+                                    [
+                                        "Linear",
+                                        [
+                                            24
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 1
+                                    }
+                                ],
+                                [
+                                    [
+                                        "ReLU",
+                                        [
+                                            25
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 1
+                                    }
+                                ],
+                                [
+                                    [
+                                        "dropout",
+                                        [
+                                            26
+                                        ]
+                                    ],
+                                    {
+                                        "p": 0.029833993342711772,
+                                        "out_channels": 1
+                                    }
+                                ],
+                                [
+                                    [
+                                        "layerNorm",
+                                        [
+                                            27
+                                        ]
+                                    ],
+                                    {
+                                        "affine": true,
+                                        "out_channels": 1
+                                    }
+                                ]
+                            ],
+                            "map_nn": [
+                                [
+                                    [
+                                        "Linear",
+                                        [
+                                            0
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 19
+                                    }
+                                ],
+                                [
+                                    [
+                                        "layerNorm",
+                                        [
+                                            1
+                                        ]
+                                    ],
+                                    {
+                                        "affine": true,
+                                        "out_channels": 19
+                                    }
+                                ],
+                                [
+                                    [
+                                        "ReLU",
+                                        [
+                                            2
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 19
+                                    }
+                                ],
+                                [
+                                    [
+                                        "dropout",
+                                        [
+                                            3
+                                        ]
+                                    ],
+                                    {
+                                        "p": 0.09013665213482475,
+                                        "out_channels": 19
+                                    }
+                                ],
+                                [
+                                    [
+                                        "Linear",
+                                        [
+                                            4
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 46
+                                    }
+                                ],
+                                [
+                                    [
+                                        "layerNorm",
+                                        [
+                                            5
+                                        ]
+                                    ],
+                                    {
+                                        "affine": true,
+                                        "out_channels": 46
+                                    }
+                                ],
+                                [
+                                    [
+                                        "ReLU",
+                                        [
+                                            6
+                                        ]
+                                    ],
+                                    {
+                                        "out_channels": 46
+                                    }
+                                ],
+                                [
+                                    [
+                                        "dropout",
+                                        [
+                                            7
+                                        ]
+                                    ],
+                                    {
+                                        "p": 0.09013665213482475,
+                                        "out_channels": 46
+                                    }
+                                ]
+                            ]
+                        }
+                    ],
+                    [
+                        [
+                            "Linear",
+                            [
+                                25
+                            ]
+                        ],
+                        {
+                            "out_channels": 45
+                        }
+                    ],
+                    [
+                        [
+                            "batchNorm1D",
+                            [
+                                26
+                            ]
+                        ],
+                        {
+                            "affine": true,
+                            "out_channels": 45
+                        }
+                    ],
+                    [
+                        [
+                            "ReLU",
+                            [
+                                27
+                            ]
+                        ],
+                        {
+                            "out_channels": 45
+                        }
+                    ],
+                    [
+                        [
+                            "dropout",
+                            [
+                                28
+                            ]
+                        ],
+                        {
+                            "p": 0.04996441372661872,
+                            "out_channels": 45
+                        }
+                    ],
+                    [
+                        [
+                            "Linear",
+                            [
+                                29
+                            ]
+                        ],
+                        {
+                            "out_channels": 35
+                        }
+                    ],
+                    [
+                        [
+                            "batchNorm1D",
+                            [
+                                30
+                            ]
+                        ],
+                        {
+                            "affine": true,
+                            "out_channels": 35
+                        }
+                    ],
+                    [
+                        [
+                            "ReLU",
+                            [
+                                31
+                            ]
+                        ],
+                        {
+                            "out_channels": 35
+                        }
+                    ],
+                    [
+                        [
+                            "dropout",
+                            [
+                                32
+                            ]
+                        ],
+                        {
+                            "p": 0.04996441372661872,
+                            "out_channels": 35
+                        }
+                    ],
+                    [
+                        [
+                            "Linear",
+                            [
+                                33
+                            ]
+                        ],
+                        {
+                            "out_channels": 25
+                        }
+                    ],
+                    [
+                        [
+                            "batchNorm1D",
+                            [
+                                34
+                            ]
+                        ],
+                        {
+                            "affine": true,
+                            "out_channels": 25
+                        }
+                    ],
+                    [
+                        [
+                            "ReLU",
+                            [
+                                35
+                            ]
+                        ],
+                        {
+                            "out_channels": 25
+                        }
+                    ],
+                    [
+                        [
+                            "dropout",
+                            [
+                                36
+                            ]
+                        ],
+                        {
+                            "p": 0.04996441372661872,
+                            "out_channels": 25
+                        }
+                    ],
+                    [
+                        [
+                            "Linear",
+                            [
+                                37
+                            ]
+                        ],
+                        {
+                            "out_channels": 1
+                        }
+                    ]
+                ]
+            ]
+        ]
+    ],
+    "params": {
+        "esm": true,
+        "ordering": "transformer_template_top_k|transformer_1,transformer_template_top_k|transformer_2,merge_template|merge",
+        "transformer_1|repeats": 1,
+        "transformer_2|repeats": 1,
+        "merge|final_norm": [
+            "None"
+        ],
+        "merge|node_linear_increment_type": "quadratic!1",
+        "merge|gate_end": 1,
+        "merge|gate_increment_type": "quadratic!1",
+        "merge|map_increment_type": "quadratic!1",
+        "merge|global_linear_end": 1,
+        "merge|global_linear_increment_type": "quadratic!1",
+        "learning_rate": 0.0002673542192474871,
+        "LR_lambda": 0.716070336557133,
+        "optimizer": "adamw|0.001",
+        "gradient_accumulation": 6,
+        "quartile": 0.20758013386612512,
+        "history_len": 7000,
+        "weight_distribution": 3,
+        "esm_stats": false,
+        "transformer_1|graph_norm": "before",
+        "transformer_1|ratio": 0.75,
+        "transformer_1|transfer_layer": true,
+        "transformer_1|out_channels": 335,
+        "transformer_1|heads": 3,
+        "transformer_1|concat": true,
+        "transformer_1|beta": true,
+        "transformer_1|dropout": 0.04421118086861678,
+        "transformer_1|edge_weight_config": "none",
+        "transformer_2|graph_norm": "before",
+        "transformer_2|ratio": 0.95,
+        "transformer_2|transfer_layer": true,
+        "transformer_2|out_channels": 22,
+        "transformer_2|heads": 4,
+        "transformer_2|concat": true,
+        "transformer_2|beta": true,
+        "transformer_2|dropout": 0.04944193080500327,
+        "transformer_2|edge_weight_config": "none",
+        "merge|ordering": "linear",
+        "merge|node_linear_len": 7,
+        "merge|node_linear_start": 98,
+        "merge|node_linear_end": 71,
+        "merge|node_linear_increment": -6,
+        "merge|node_linear_p": 0.0638053022452135,
+        "merge|node_linear_recurrent": [
+            "None"
+        ],
+        "merge|node_linear_norm": [
+            "layerNorm",
+            true,
+            "before"
+        ],
+        "merge|gate_len": 6,
+        "merge|gate_start": 46,
+        "merge|gate_increment": -8,
+        "merge|gate_p": 0.029833993342711772,
+        "merge|gate_recurrent": [
+            "None"
+        ],
+        "merge|gate_norm": [
+            "layerNorm",
+            true,
+            "after"
+        ],
+        "merge|map_len": 5,
+        "merge|map_start": 19,
+        "merge|map_end": 46,
+        "merge|map_increment": -11,
+        "merge|map_p": 0.09013665213482475,
+        "merge|map_recurrent": [
+            "None"
+        ],
+        "merge|map_norm": [
+            "layerNorm",
+            true,
+            "before"
+        ],
+        "merge|global_linear_len": 3,
+        "merge|global_linear_start": 45,
+        "merge|global_linear_increment": -10,
+        "merge|global_linear_p": 0.04996441372661872,
+        "merge|global_linear_recurrent": [
+            "None"
+        ],
+        "merge|global_linear_norm": [
+            "batchNorm1D",
+            true,
+            "before"
+        ]
+    }
+}

@@ -1,0 +1,776 @@
+{
+    "model_type": "ebm",
+    "data_params": {
+        "data_tag": "global_TM_1.1.model_6.4_",
+        "batch_size_training": 32,
+        "batch_size_validation": 32
+    },
+    "start_epoch": -1,
+    "learning_rate": 1.9689939116937563e-05,
+    "optimizer": [
+        "adamw",
+        0.1
+    ],
+    "scheduler": [
+        "MultiplicativeLR",
+        {
+            "lr_lambda": 0.675302826696286
+        }
+    ],
+    "gradient_accumulation": 2,
+    "epochs": 25,
+    "sync_bn": true,
+    "clip_grad": -1,
+    "clip_norm": -1,
+    "quartile": 0.538130052912375,
+    "history_len": 2500,
+    "shuffle": true,
+    "sanity": false,
+    "beta": 0.05094308763039647,
+    "quartile_spread": 0.05079317405215908,
+    "sigma": -1,
+    "adversarial_examples": 143,
+    "in_channels": 14,
+    "validation_interval": 1000,
+    "init": [
+        [
+            [
+                "Linear",
+                [
+                    0
+                ]
+            ],
+            {
+                "out_channels": 28,
+                "adversarial_input": true
+            }
+        ],
+        [
+            [
+                "ReLU",
+                [
+                    1
+                ]
+            ],
+            {
+                "out_channels": 28
+            }
+        ],
+        [
+            [
+                "dropout",
+                [
+                    2
+                ]
+            ],
+            {
+                "p": 0.011843496051657914,
+                "out_channels": 28
+            }
+        ],
+        [
+            [
+                "layerNorm",
+                [
+                    3
+                ]
+            ],
+            {
+                "affine": true,
+                "out_channels": 28
+            }
+        ],
+        [
+            [
+                "Linear",
+                [
+                    4
+                ]
+            ],
+            {
+                "out_channels": 102,
+                "adversarial_input": true
+            }
+        ],
+        [
+            [
+                "ReLU",
+                [
+                    5
+                ]
+            ],
+            {
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "dropout",
+                [
+                    6
+                ]
+            ],
+            {
+                "p": 0.011843496051657914,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "layerNorm",
+                [
+                    7
+                ]
+            ],
+            {
+                "affine": true,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "Linear",
+                [
+                    8
+                ]
+            ],
+            {
+                "out_channels": 102,
+                "adversarial_input": true
+            }
+        ],
+        [
+            [
+                "ReLU",
+                [
+                    9
+                ]
+            ],
+            {
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "dropout",
+                [
+                    10
+                ]
+            ],
+            {
+                "p": 0.011843496051657914,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "layerNorm",
+                [
+                    11
+                ]
+            ],
+            {
+                "affine": true,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "Linear",
+                [
+                    12
+                ]
+            ],
+            {
+                "out_channels": 102,
+                "adversarial_input": true
+            }
+        ],
+        [
+            [
+                "ReLU",
+                [
+                    13
+                ]
+            ],
+            {
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "dropout",
+                [
+                    14
+                ]
+            ],
+            {
+                "p": 0.011843496051657914,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "layerNorm",
+                [
+                    15
+                ]
+            ],
+            {
+                "affine": true,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "Linear",
+                [
+                    16
+                ]
+            ],
+            {
+                "out_channels": 102,
+                "adversarial_input": false
+            }
+        ],
+        [
+            [
+                "ReLU",
+                [
+                    17
+                ]
+            ],
+            {
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "dropout",
+                [
+                    18
+                ]
+            ],
+            {
+                "p": 0.011843496051657914,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "layerNorm",
+                [
+                    19
+                ]
+            ],
+            {
+                "affine": true,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "Linear",
+                [
+                    20
+                ]
+            ],
+            {
+                "out_channels": 102,
+                "adversarial_input": false
+            }
+        ],
+        [
+            [
+                "ReLU",
+                [
+                    21
+                ]
+            ],
+            {
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "dropout",
+                [
+                    22
+                ]
+            ],
+            {
+                "p": 0.011843496051657914,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "layerNorm",
+                [
+                    23
+                ]
+            ],
+            {
+                "affine": true,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "Linear",
+                [
+                    24
+                ]
+            ],
+            {
+                "out_channels": 102,
+                "adversarial_input": false
+            }
+        ],
+        [
+            [
+                "ReLU",
+                [
+                    25
+                ]
+            ],
+            {
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "dropout",
+                [
+                    26
+                ]
+            ],
+            {
+                "p": 0.011843496051657914,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "layerNorm",
+                [
+                    27
+                ]
+            ],
+            {
+                "affine": true,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "Linear",
+                [
+                    28
+                ]
+            ],
+            {
+                "out_channels": 102,
+                "adversarial_input": false
+            }
+        ],
+        [
+            [
+                "ReLU",
+                [
+                    29
+                ]
+            ],
+            {
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "dropout",
+                [
+                    30
+                ]
+            ],
+            {
+                "p": 0.011843496051657914,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "layerNorm",
+                [
+                    31
+                ]
+            ],
+            {
+                "affine": true,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "Linear",
+                [
+                    32
+                ]
+            ],
+            {
+                "out_channels": 102,
+                "adversarial_input": false
+            }
+        ],
+        [
+            [
+                "ReLU",
+                [
+                    33
+                ]
+            ],
+            {
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "dropout",
+                [
+                    34
+                ]
+            ],
+            {
+                "p": 0.011843496051657914,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "layerNorm",
+                [
+                    35
+                ]
+            ],
+            {
+                "affine": true,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "Linear",
+                [
+                    36
+                ]
+            ],
+            {
+                "out_channels": 102,
+                "adversarial_input": false
+            }
+        ],
+        [
+            [
+                "ReLU",
+                [
+                    37
+                ]
+            ],
+            {
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "dropout",
+                [
+                    38
+                ]
+            ],
+            {
+                "p": 0.011843496051657914,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "layerNorm",
+                [
+                    39
+                ]
+            ],
+            {
+                "affine": true,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "Linear",
+                [
+                    40
+                ]
+            ],
+            {
+                "out_channels": 102,
+                "adversarial_input": false
+            }
+        ],
+        [
+            [
+                "ReLU",
+                [
+                    41
+                ]
+            ],
+            {
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "dropout",
+                [
+                    42
+                ]
+            ],
+            {
+                "p": 0.011843496051657914,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "layerNorm",
+                [
+                    43
+                ]
+            ],
+            {
+                "affine": true,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "Linear",
+                [
+                    44
+                ]
+            ],
+            {
+                "out_channels": 102,
+                "adversarial_input": false
+            }
+        ],
+        [
+            [
+                "ReLU",
+                [
+                    45
+                ]
+            ],
+            {
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "dropout",
+                [
+                    46
+                ]
+            ],
+            {
+                "p": 0.011843496051657914,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "layerNorm",
+                [
+                    47
+                ]
+            ],
+            {
+                "affine": true,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "Linear",
+                [
+                    48
+                ]
+            ],
+            {
+                "out_channels": 102,
+                "adversarial_input": false
+            }
+        ],
+        [
+            [
+                "ReLU",
+                [
+                    49
+                ]
+            ],
+            {
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "dropout",
+                [
+                    50
+                ]
+            ],
+            {
+                "p": 0.011843496051657914,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "layerNorm",
+                [
+                    51
+                ]
+            ],
+            {
+                "affine": true,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "Linear",
+                [
+                    52
+                ]
+            ],
+            {
+                "out_channels": 102,
+                "adversarial_input": false
+            }
+        ],
+        [
+            [
+                "ReLU",
+                [
+                    53
+                ]
+            ],
+            {
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "dropout",
+                [
+                    54
+                ]
+            ],
+            {
+                "p": 0.011843496051657914,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "layerNorm",
+                [
+                    55
+                ]
+            ],
+            {
+                "affine": true,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "Linear",
+                [
+                    56
+                ]
+            ],
+            {
+                "out_channels": 102,
+                "adversarial_input": false
+            }
+        ],
+        [
+            [
+                "ReLU",
+                [
+                    57
+                ]
+            ],
+            {
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "dropout",
+                [
+                    58
+                ]
+            ],
+            {
+                "p": 0.011843496051657914,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "layerNorm",
+                [
+                    59
+                ]
+            ],
+            {
+                "affine": true,
+                "out_channels": 102
+            }
+        ],
+        [
+            [
+                "Linear",
+                [
+                    60
+                ]
+            ],
+            {
+                "out_channels": 1,
+                "adversarial_input": false
+            }
+        ]
+    ],
+    "params": {
+        "final_norm": false,
+        "learning_rate": 1.9689939116937563e-05,
+        "LR_lambda": 0.675302826696286,
+        "optimizer": "adamw|0.1",
+        "gradient_accumulation": 2,
+        "quartile": 0.538130052912375,
+        "history_len": 2500,
+        "adversarial_input": 0.29402334023232024,
+        "beta": 0.05094308763039647,
+        "quartile_spread": 0.05079317405215908,
+        "adversarial_examples": 143,
+        "length": 15,
+        "start_channels": 28,
+        "max_channels": 152,
+        "min_channels": 102,
+        "increment": -5,
+        "dropout_rate": 0.011843496051657914,
+        "normalization": "after",
+        "residual": false,
+        "sigmoid": false
+    }
+}
