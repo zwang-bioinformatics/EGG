@@ -345,10 +345,11 @@ for epoch in range(1,args.epochs+1):
                 out_i = model(torch.cat((x_i,y_i),dim=1))
                 out_i = torch.squeeze(out_i,dim=1).cpu()
 
-                prediction_i = linear_space[torch.argmax(out_i)].cpu()
+                prediction_i = linear_space[torch.argmax(out_i)]
 
+                targets = targets.cpu()
                 target_item = targets.item()
-
+                
                 if target_item == 1: 
                     metrics[epoch]["Validation"]["L1"][3][0] += crit_L1(prediction_i,targets).item()
                     metrics[epoch]["Validation"]["L1"][3][1] += 1
