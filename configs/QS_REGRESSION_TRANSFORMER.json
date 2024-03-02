@@ -24,7 +24,7 @@
     "clip_norm": -1,
     "quartile": 0.20758013386612512,
     "history_len": 7000,
-    "weight_distribution": 3,
+    "weight_distribution": 2,
     "shuffle": true,
     "sanity": false,
     "init": [
