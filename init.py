@@ -79,7 +79,8 @@ single_model_groups_TM = set([
     "ChaePred",
     "APOLLO",
     "LAW",
-    "MASS"
+    "MASS",
+    "VoroIF"
 ])
 
 single_model_groups_QS = set([
@@ -91,7 +92,8 @@ single_model_groups_QS = set([
     "Manifold",
     "APOLLO",
     "LAW",
-    "MASS"
+    "MASS",
+    "VoroIF"
 ])
 
 ###################################
