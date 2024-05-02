@@ -80,7 +80,8 @@ single_model_groups_TM = set([
     "APOLLO",
     "LAW",
     "MASS",
-    "VoroIF"
+    "VoroIF",
+    "Manifold",
 ])
 
 single_model_groups_QS = set([
