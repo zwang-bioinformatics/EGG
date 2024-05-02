@@ -93,7 +93,7 @@ single_model_groups_QS = set([
     "APOLLO",
     "LAW",
     "MASS",
-    "VoroIF"
+    "VoroIF",
     "GuijunLab-RocketX"
 ])
 
