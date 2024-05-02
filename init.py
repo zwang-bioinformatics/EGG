@@ -88,12 +88,13 @@ single_model_groups_QS = set([
     "MULTICOM_deep",
     "DLA-Ranker",
     "ChaePred",
-    "Bhattacharya",
+    "Bhattacharya", # only interface is single-model based
     "Manifold",
     "APOLLO",
     "LAW",
     "MASS",
     "VoroIF"
+    "GuijunLab-RocketX"
 ])
 
 ###################################
