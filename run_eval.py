@@ -23,7 +23,7 @@ if not os.path.exists(reproduce_figures + "sub_figs/"): os.makedirs(reproduce_fi
 ###################################
 
 TM_inits = [(model,"default") for model in TM_models]
-TM_results = general_results(TM_inits,is_overall_fold=True)
+TM_results, TM_target_results = general_results(TM_inits,is_overall_fold=True)
 
 print("\nTM-L1:\n")
 pprint.pprint(TM_results["L1"])
@@ -35,7 +35,7 @@ line_break()
 ###################################
 
 QS_inits = [(model,"default") for model in QS_models]
-QS_results = general_results(QS_inits,is_overall_fold=False)
+QS_results, QS_target_results = general_results(QS_inits,is_overall_fold=False)
 
 print("QS-L1:\n")
 pprint.pprint(QS_results["L1"])
@@ -46,6 +46,18 @@ model_categories = {
     "TM": TM_results,
     "QS": QS_results
 }
+
+line_break()
+
+###################################
+
+generate_target_xlsx(
+    {
+        "TM": (TM_inits,TM_target_results), 
+        "QS": (QS_inits,QS_target_results)
+    }, 
+    ROOT + "reproduced_figures/S2.xlsx"
+)
 
 line_break()
 
@@ -102,8 +114,8 @@ with tqdm(total=len(model_categories)*4 + 3,desc="Generating Figures") as pbar:
     pbar.update(1)
 
     merge_images([
-        ("TM-score ranking loss",reproduce_figures + "sub_figs/TM_NDCG.png"),
-        ("QS-score ranking loss",reproduce_figures + "sub_figs/QS_NDCG.png")
+        ("TM-score NDCG@3 ranking",reproduce_figures + "sub_figs/TM_NDCG.png"),
+        ("QS-score NDCG@3 ranking",reproduce_figures + "sub_figs/QS_NDCG.png")
     ], reproduce_figures + "combined_NDCG.png")
 
     pbar.update(1)
